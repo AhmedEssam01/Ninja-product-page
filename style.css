@@ -1,0 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+#home-page {
+    background-image: linear-gradient(to right, #20192C, #79123F, #20192C);
+    font-family: PT, serif;
+    position: relative;
+    overflow: hidden;
+    height: 100vh;
+}
+
+.nav-content a {
+    color: #fff;
+    font-weight: 500;
+    transition: 0.5s;
+}
+
+.nav-content a:hover{
+    background-color: #79123F;
+    border-radius: 10px;
+}
+
+.nav-content button {
+    width: 100px;
+    border-radius: 20px;
+    color: #fff;
+    border-color: #fff;
+    font-weight: 700;
+}
+
+.nav-content button:hover {
+    background-color: #79123F;
+    border-color: #20192C;
+    color: #fff;
+}
+
+.ninja {
+    position: absolute;
+    right: -25%;
+    z-index: 0;
+    top: 7%;
+}
+
+.content .content-words {
+    color: #fff;
+    font-weight: 700;
+
+}
+
+.content .content-words button {
+    width: 120px;
+    border-radius: 20px;
+    color: #fff;
+    border-color: #fff;
+    font-weight: 700;
+}
+
+.content .content-words button:hover {
+    background-color: #79123F;
+    border-color: #20192C;
+}
+
+.content .content-image .layer {
+    position: absolute;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content .content-image .ninja {
+    position: relative;
+    z-index: 1;
+}
+
+.card {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 250;
+    height: 250px;
+    position: relative;
+    background: linear-gradient(135deg, rgba(32, 25, 44, 70%), rgba(32, 25, 44, 7%));
+    padding: 2.5em 3em;
+    border-radius: 30px;
+    box-shadow: 10px 10px 20px rgba(0 0 0 / .24);
+    backdrop-filter: blur(10px);
+
+    &::before {
+        position: absolute;
+        content: '';
+        inset: 0;
+        z-index: -1;
+        border-radius: 30px;
+        background-image: none;
+        background-size: contain;
+        -webkit-filter: blur(20px);
+        -moz-filter: blur(20px);
+        -o-filter: blur(20px);
+        -ms-filter: blur(20px);
+    }
+
+    .title {
+        font-size: 1.5rem;
+        line-height: 1.2;
+        color: #fff;
+    }
+
+    .text {
+        font-size: 1rem;
+        margin-top: 1em;
+        color: #fff;
+    }
+}
+
+@media(max-width:480px) {
+    .navbar-collapse {
+        z-index: 2;
+        background-image: linear-gradient(to right, #20192C, #79123F);
+        position: absolute;
+        top: 100%;
+        width: 90%;
+    }
+
+    #home-page {
+        height: auto;
+    }
+
+    .card {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
